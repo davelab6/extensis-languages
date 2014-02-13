@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-FILE VERSION: 1.16
+FILE VERSION: 1.19
 
-COPYRIGHT:
-Permission is hereby granted, free of charge, to any person obtaining a copy of this 
-data, to deal with the data without restriction, including without limitation the right 
-to use, copy, modify, merge, publish, or distribute the data subject to the following 
-conditions: THE DATA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
-PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY 
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE DATA OR THE USE OR OTHER DEALINGS WITH 
-THE DATA.
+Copyright 2011-2014, Celartem, Inc. dba Extensis.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
 
 NOTES ON CONSTRUCTION:
 1. Language name attribute values are case-sensitive and must be unique.
@@ -20,19 +21,24 @@ NOTES ON CONSTRUCTION:
    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789".
 3. Language parent attribute values are case-sensitive and must refer to the parent's 
    language name.
-4. Circular parental references are BAD! (ex/ langA has parent langB, langB has parent 
+4. Circular parental references are BAD! (example: langA has parent langB, langB has parent 
    langC, and langC has parent langA).
-5. Each language must have at least one scanning-codepoint.
+5. Each language, with its parents included, must have at least one scanning-codepoint.
 6. Where possible, language abbreviated names come from: 
    http://www.microsoft.com/typography/developers/opentype/languagetags.aspx.
 
 USEFUL SOURCES:
-1. For Latin and Cyrillic based languages, the eki.ee letter databases are fabulous! http://www.eki.ee/letter/
-2. Unicode consortium code charts. Note especially that besides letters or ideographs needed to write a language, currency
-   symbols (http://www.unicode.org/charts/PDF/U20A0.pdf) and punctuation (http://www.unicode.org/charts/PDF/U2000.pdf) have
-   their own blocks, and many languages use some common characters from ASCII (http://www.unicode.org/charts/PDF/U0000.pdf).
-3. Speaking of punctuation, how do you know which quote marks a language needs? This Wikipedia page is
-   good. http://en.wikipedia.org/wiki/Non-English_usage_of_quotation_marks
+1. For Latin and Cyrillic based languages, the eki.ee letter databases are fabulous!
+   http://www.eki.ee/letter/
+2. Unicode consortium code charts. Note especially that besides letters or ideographs 
+   needed to write a language, currency
+   symbols (http://www.unicode.org/charts/PDF/U20A0.pdf) and punctuation
+   (http://www.unicode.org/charts/PDF/U2000.pdf) have
+   their own blocks, and many languages use some common characters from ASCII
+   (http://www.unicode.org/charts/PDF/U0000.pdf).
+3. Speaking of punctuation, how do you know which quote marks a language needs? 
+   This Wikipedia page is good. 
+   http://en.wikipedia.org/wiki/Non-English_usage_of_quotation_marks
 -->
 
 <languages>
@@ -217,7 +223,7 @@ USEFUL SOURCES:
 	 -->
 	<language name="AdobeLatin4" abbreviated-name="AL4" anglicized-name="Adobe Latin 4" parent="AdobeLatin3">
 		<scanning-codepoints>
-			0x0020-0x0040,0x005B-0x0060,0x007A-0x007E,0x00BB,0x00BF-0x00D6,0x00D9-0x00DD,0x00E0-0x00F6,0x00F9-0x00FD,0x0010-0x0107,0x010C-0x012B,0x012E-0x0131,0x0134-0x0149,0x014C,0x014D,0x0150-0x0165,
+			0x0020-0x0040,0x005B-0x0060,0x007A-0x007E,0x00BB,0x00BF-0x00D6,0x00D9-0x00DD,0x00E0-0x00F6,0x00F9-0x00FD,0x0106-0x0107,0x010C-0x012B,0x012E-0x0131,0x0134-0x0149,0x014C,0x014D,0x0150-0x0165,
 			0x0168-0x017E,0x018F,0x01A0,0x01A1,0x01AF,0x01B0,0x01CD-0x01DC,0x01E6,0x01E7,0x0218-0x021B,0x0237,0x0251,0x0259,0x0261,0x02BB,0x02BC,0x02BE,0x02BF,0x02C6-0x02C8,0x02CA-0x02CC,0x02D8-0x02DD,
 			0x0301-0x0304,0x0306-0x030C,0x031B,0x0323,0x0324,0x0326-0x0328,0x032E,0x0331,0x1E0C-0x1E0F,0x1E21,0x1E24,0x1E25,0x1E2A,0x1E2B,0x1E36-0x1E3B,0x1E42-0x1E49,0x1E5A-0x1E63,0x1E6C-0x1E6F,
 			0x1E80-0x1E85,0x1E8E,0x1E8F,0x1E92,0x1E93,0x1E97,0x1E9E,0x1EA0-0x1EF9,0x2013,0x2014,0x2018-0x201A,0x201C-0x201E,0x2022,0x2026,0x2039,0x203A,
@@ -334,7 +340,40 @@ USEFUL SOURCES:
 			0x0672-0x06D3,0x06D5,0x06F0-0x06F9,0x06FA-0x06FC
 		</scanning-codepoints>
 	</language>
-	
+
+	<language name="ArabicLatinTransDIN" abbreviated-name="ARTD" anglicized-name="Arabic Transliteration (DIN 31635)" parent="English">
+		<scanning-codepoints>
+			0x02BE,0x02BF,0x0100,0x0101,0x1E6E,0x1E6F,0x01E6,0x01E7,0x1E24,0x1E25,
+			0x1E2A,0x1E2B,0x1E0C-0x1E0F,0x0160,0x0161,0x1E62,0x1E63,0x1E6C,0x1E6D,
+			0x1E92,0x1E93,0x0120,0x0121
+		</scanning-codepoints>
+		<subsetting-codepoints>
+			0x016A,0x016B,0x012A,0x012B
+		</subsetting-codepoints>
+	</language>
+
+	<language name="ArabicLatinTransISO" abbreviated-name="ARTI" anglicized-name="Arabic Transliteration (ISO-233)" parent="English">
+		<scanning-codepoints>
+			0x02CC,0x02CE,0x02BE,0x1E6E,0x1E6F,0x01E6,0x01E7,0x1E24,0x1E25,0x1E96,
+			0x1E0E,0x1E0F,0x0160,0x0161,0x1E62,0x1E63,0x1E0C,0x1E0D,0x1E6C,0x1E6D,
+			0x1E92,0x1E93,0x02BF,0x0120,0x0121,0x1E97,0x1EF2,0x1EF3
+		</scanning-codepoints>
+		<subsetting-codepoints>
+			0x0331,0x0308
+		</subsetting-codepoints>
+	</language>
+
+
+	<language name="ArabicLatinTransALA" abbreviated-name="ARTL" anglicized-name="Arabic Transliteration ALA-LC" parent="English">
+		<scanning-codepoints>
+			0x00C1,0x00E1,0x0100,0x0101,0x012A,0x012B,0x016A,0x016B,
+			0x1E0C,0x1E0D,0x1E24,0x1E25,0x1E62,0x1E63,0x1E6C,0x1E6D,0x1E92,0x1E93
+		</scanning-codepoints>
+		<subsetting-codepoints>
+			0x02BB
+		</subsetting-codepoints>
+	</language>
+
 <!--
 CAUTION: Armenian needs work!
 -->
@@ -758,7 +797,7 @@ CAUTION: Coptic needs work!
 	</language>
 
 
-	<language name="Cyrillic" abbreviated-name="CYRL" anglicized-name="Basic Cyrillic">
+	<language name="Cyrillic" abbreviated-name="CYRL" parent="Russian" anglicized-name="Basic Cyrillic">
 		<scanning-codepoints>
 			0x0020,0x0022,0x0027,0x00AB,0x00BB,0x0401-0x040C,0x040E-0x044F,0x0451-0x045F,0x0490,0x0491,
 			0x2018-0x201A,0x201C-0x201E,0x2039,0x203A
@@ -767,18 +806,15 @@ CAUTION: Coptic needs work!
 			0x0021,0x0023-0x0026,0x0028-0x0040,0x005B-0x0060,0x007B-0x007E,0x00A0,0x00A4,
 			0x00A6,0x00A7,0x00A9,0x00AC-0x00AE,0x00B0,0x00B1,0x00B5-0x00B7,
 			0x2010,  <!-- proper hyphen, not to be confused with ASCII hyphen 0x002D -->
-			0x2013,0x2014,0x2026,0x20AC,0x2116,0x2122,0x2219
+			0x2013-0x2015,0x2026,0x20AC,0x2116,0x2122,0x2219
 		</subsetting-codepoints>
 	</language>
 
 	<language name="Czech" abbreviated-name="CSY" parent="English">
 		<scanning-codepoints>
-			0x0041-0x005A,0x0061-0x007A,0x0082,0x0084,0x00C1,0x00C4,0x00C9,0x00CD,0x00D3,0x00D6,0x00DA,0x00DC,0x00DD,0x00E1,0x00E4,0x00E9,0x00ED,0x00F3,0x00F6,0x00FA,0x00FC,0x00FD,
-			0x010C-0x010F,0x011A,0x011B,0x0147,0x0148,0x0158,0x0159,0x0160,0x0161,0x0164,0x0165,0x016E,0x016F,0x017D,0x017E 
+			0x0041-0x005A,0x0061-0x007A,0x00AB,0x00BB,0x00C1,0x00C4,0x00C9,0x00CD,0x00D3,0x00D6,0x00DA,0x00DC,0x00DD,0x00E1,0x00E4,0x00E9,0x00ED,0x00F3,0x00F6,0x00FA,0x00FC,0x00FD,
+			0x010C-0x010F,0x011A,0x011B,0x0147,0x0148,0x0158,0x0159,0x0160,0x0161,0x0164,0x0165,0x016E,0x016F,0x017D,0x017E,0x2018,0x201A,0x201C,0x201E,0x2039,0x203A 
 		</scanning-codepoints>
-		<subsetting-codepoints>
-			0x008B,0x009B,0x00AB,0x00BB
-		</subsetting-codepoints>
 	</language>
 
 	<language name="Danish" abbreviated-name="DAN" parent="English">
@@ -819,7 +855,7 @@ CAUTION: Coptic needs work!
 			0x201A,0x201E
 		</scanning-codepoints>
 		<subsetting-codepoints>
-			0x0132,0x0133
+			0x0132,0x0133,0x0192
 		</subsetting-codepoints>
 	</language>
 	
@@ -843,6 +879,7 @@ CAUTION: Coptic needs work!
 			0x2010,  <!-- proper hyphen, not to be confused with ASCII hyphen 0x002D -->
 			0x2013,  <!-- endash -->
 			0x2014,  <!-- emdash -->
+			0x2015,  <!-- quotation dash, also used in many Latin languages -->
 			0x2018,  <!-- left single quote -->
 			0x2019,  <!-- right single quote, also apostrophe -->
 			0x201C,  <!-- quotedblleft -->
@@ -917,13 +954,6 @@ CAUTION: Coptic needs work!
 		</scanning-codepoints>
 	</language>
 
-	<language name="Faroese" abbreviated-name="FOS" parent="English">
-		<scanning-codepoints>
-			0x00C1,0x00E1,0x00C6,0x00E6,0x00D6,0x00F0,0x00CD,0x00ED,
-			0x00D3,0x00F3,0x00D8,0x00F8,0x00DA,0x00FA,0x00DD,0x00FD
-		</scanning-codepoints>
-	</language>
-
 <!--
 CAUTION: Farsi needs work!
 -->	
@@ -967,13 +997,6 @@ CAUTION: Farsi needs work!
 		</subsetting-codepoints>
 	</language>
 
-	<language name="Gaelic" abbreviated-name="GAE" parent="English" anglicized-name="Gaelic (Scots)">
-		<scanning-codepoints>
-			0x00C0,0x00E0,0x00C1,0x00E1,0x00C8,0x00E8,0x00C9,0x00E9,
-			0x00CC,0x00EC,0x00D2,0x00F2,0x00D3,0x00F3,0x00D9,0x00F9
-		</scanning-codepoints>
-	</language>
-
 	<language name="Gagauz" abbreviated-name="GAG" parent="Cyrillic">
 		<scanning-codepoints>
 			0x04C1,0x04C2,0x04D2,0x04D3,0x04E6,0x04E7,0x04F0,0x04F1
@@ -989,7 +1012,7 @@ CAUTION: Farsi needs work!
 			0x00CF,0x00D1,0x00D4,0x00D9,0x00DB,0x00E0,0x00E2,0x00E6,0x00E8-0x00EB,
 			0x00EE,0x00EF,0x00F1,0x00F4,0x00F9,0x00FB,0x00FF,0x0178,
 			0x2010,  <!-- proper hyphen, not to be confused with ASCII hyphen 0x002D -->
-			0x2019-0x201A,0x201D,0x201F
+			0x2018-0x201A,0x201D,0x201F
 		</subsetting-codepoints>
 	</language>
 	
@@ -1037,7 +1060,7 @@ CAUTION: Farsi needs work!
 		<subsetting-codepoints>
 			0x0022,0x0025-0x0040,0x007C,0x00A9,
 			0x2010,  <!-- proper hyphen, not to be confused with ASCII hyphen 0x002D -->
-			0x201C,0x201D,0x20AC,0x20AF
+			0x2013-0x2015,0x201C,0x201D,0x20AC,0x20AF
 		</subsetting-codepoints>
 	</language>
 	
@@ -1055,16 +1078,6 @@ CAUTION: Farsi needs work!
 		</scanning-codepoints>
 		<subsetting-codepoints>
 			0x00C3,0x00D5,0x0128,0x0168,0x1EBA,0x1EF8,0x20B2,0xE004
-		</subsetting-codepoints>
-	</language>
-
-	<language name="Greenlandic" abbreviated-name="GRN" parent="English">
-		<scanning-codepoints>
-			0x00C5,0x00E5,0x00C6,0x00E6,0x00D8,0x00F8
-		</scanning-codepoints>
-		<subsetting-codepoints>
-			0x00C1-0x00C3,0x00E1-0x00E3,0x00C9,0x00E9,0x00CA,0x00EA,0x00CD,0x00ED,0x00CE,0x00EE,
-			0x0128,0x0129,0x0138,0x00D4,0x00F4,0x00DA,0x00FA,0x00DB,0x00FB,0x0168,0x0169
 		</subsetting-codepoints>
 	</language>
 
@@ -1221,6 +1234,23 @@ CAUTION: Hong Kong Supplementary needs work!
 		</subsetting-codepoints>
 	</language>
 
+	<language name="IndicLatinTransHunt" abbreviated-name="INTH" anglicized-name="Indic Transliteration (Hunterian)" parent="English">
+		<scanning-codepoints>
+			0x0100,0x0101,0x012A,0x012B,0x016A,0x016B
+		</scanning-codepoints>
+		<subsetting-codepoints>
+			0x0112,0x0113,0x014C,0x014D,0x00C1,0x00E1,0x00C9,0x00E9,0x00CD,0x00ED,
+			0x00D3,0x00E3,0x00DA,0x00FA
+		</subsetting-codepoints>
+	</language>
+	
+	<language name="IndicLatinTransIAST" abbreviated-name="INTI" anglicized-name="Indic Transliteration (IAST)" parent="English">
+		<scanning-codepoints>
+			0x1E44,0x1E55,0x1E0A,0x1E0B,0x1E58,0x1E59,0x1E62,0x1E63,0x1E6C,0x1E6D,
+			0x0100,0x0101,0x012A,0x012B,0x016A,0x016B,0x00D1,0x00F1,0x015A,0x015B
+		</scanning-codepoints>
+	</language>
+
 	<language name="Indonesian" abbreviated-name="IND" parent="English">
 		<scanning-codepoints>
 			0x0100,0x0101,0x0112,0x0113,0x012A,0x012B,0x014C,0x014D,0x016A,0x016B
@@ -1254,7 +1284,7 @@ CAUTION: IPA needs work!
 			0x00AB,0x00BB,0x00C0,0x00C8,0x00C9,0x00CC,0x00CD,0x00CF,0x00D2,0x00D3,0x00D9,0x00DA,0x00E0,0x00E8,0x00E9,0x00EC,0x00ED,0x00EF,0x00F2,0x00F3,0x00F9,0x00FA
 		</scanning-codepoints>
 		<subsetting-codepoints>
-			0x008B,0x009B,0x00A3,0x0192,0x2039,0x203A,0x20A4
+			0x00A3,0x0192,0x2039,0x203A,0x20A4
 		</subsetting-codepoints>
 	</language>
 
@@ -1347,19 +1377,6 @@ CAUTION: Khmer needs work!
 			0x04A2,0x04A3,0x04AE,0x04AF,0x04E8,0x04E9
 		</scanning-codepoints>
 	</language>
-
-	<language name="KurdishKurmanci" abbreviated-name="KURK" parent="English" anglicized-name="Kurdish (Kurmancî)">
-		<scanning-codepoints>
-			0x00C7,0x00E7,0x00CA,0x00EA,0x00CE,0x00EE,0x015E,0x015F,0x00DB,0x00FB
-		</scanning-codepoints>
-	</language>
-	
-	<language name="KurdishYekgirtu" abbreviated-name="KURY" parent="English" anglicized-name="Kurdish (Yekgirtú)">
-		<scanning-codepoints>
-			0x00C9,0x00E9,0x00CD,0x00ED,0x00D9,0x00F9,0x00DA,0x00FA
-		</scanning-codepoints>
-	</language>
-	
 
 	<language name="Lakh" abbreviated-name="LAK" parent="Cyrillic">
 		<scanning-codepoints>
@@ -1585,12 +1602,6 @@ CAUTION: Malayalam needs work!
 		</scanning-codepoints>
 	</language>
 
-	<language name="Maori" abbreviated-name="MRI" parent="English">
-		<scanning-codepoints>
-			0x0100,0x0101,0x0112,0x0113,0x012A,0x012B,0x014C,0x014D,0x016A,0x016B
-		</scanning-codepoints>
-	</language>
-	
 	<language name="MariHill" abbreviated-name="MRH" parent="Cyrillic" anglicized-name="Mari Hill">
 		<scanning-codepoints>
 			0x04D2,0x04D3,0x04E6,0x04E7,0x04F0,0x04F1,0x04F8,0x04F9
@@ -1679,12 +1690,6 @@ CAUTION: LaiLueNew needs work!
 		</scanning-codepoints>
 	</language>
 
-	<language name="Tswana" abbreviated-name="TNA" parent="English">
-		<scanning-codepoints>
-			0x00CA,0x00EA,0x00D4,0x00F4,0x0160,0x0161
-		</scanning-codepoints>
-	</language>
-
 <!--
 CAUTION: Oriya needs work!
 -->
@@ -1740,9 +1745,13 @@ CAUTION: Pashto needs work!
 	
 	<language name="Polish" abbreviated-name="PLK" parent="English">
 		<scanning-codepoints>
-			0x0084,0x008B,0x009B,0x00AB,0x00BB,0x00D3,0x00F3,
-			0x0104-0x0107,0x0118,0x0119,0x0141-0x0144,0x015A,0x015B,0x0179-0x017C
+			0x00AB,0x00BB,0x00D3,0x00F3,
+			0x0104-0x0107,0x0118,0x0119,0x0141-0x0144,0x015A,0x015B,0x0179-0x017C,
+			0x2019,0x201A,0x201D,0x201E
 		</scanning-codepoints>
+		<subsetting-codepoints>
+			0x2015
+		</subsetting-codepoints>
 	</language>
 
 	<language name="Portuguese" abbreviated-name="PTG" parent="English">
@@ -1768,7 +1777,7 @@ CAUTION: Pashto needs work!
 		</subsetting-codepoints>
 	</language>
 	
-	<language name="Romanian" abbreviated-name="ROM" parent="English" anglicized-name="Romanian (&amp; Latin Moldovan)">
+	<language name="Romanian" abbreviated-name="ROM" parent="English" anglicized-name="Romanian (&amp; Latin Moldovan">
 		<scanning-codepoints>
 			0x00AB,0x00BB,0x00C2,0x00CE,0x00E2,0x00EE,0x0102,0x0103,0x0218-0x021B,0x201E
 		</scanning-codepoints>
@@ -1785,49 +1794,19 @@ CAUTION: Pashto needs work!
 			0x00A9,0x00AE,
 			0x0401, <!-- Cyrillic capital io -->
 			0x0451,  <!-- Cyrillic lower case io -->
-			0x2010,0x2013,0x2014,0x2039,0x203A,0x20AC,0x2122
+			0x2010,0x2013-0x2015,0x2018,0x201A,0x201C,0x201E,0x2039,0x203A,0x20AC,0x2122
 		</subsetting-codepoints>
 	</language>
 
-	<language name="SamiInari" abbreviated-name="ISM" anglicized-name="Inari Sami">
+	<language name="Serbo-CroatianCyrillic" abbreviated-name="SRCC" parent="Cyrillic" anglicized-name="Serbo-Croatian (Cyrillic)">
 		<scanning-codepoints>
-			0x00C1,0x00E1,0x00C2,0x00E2,0x00C4,0x00E4,0x010C,0x010D,0x0110,0x0111,
-			0x014A,0x014B,0x0160,0x0161,0x017D,0x017E
-		</scanning-codepoints>
-	</language>
-
-	<language name="SamiNorthern" abbreviated-name="NSM" anglicized-name="Northern Sami">
-		<scanning-codepoints>
-			0x00C1,0x00E1,0x010C,0x010D,0x0110,0x0111,
-			0x014A,0x014B,0x0160,0x0161,0x0166,0x0167,0x017D,0x017E
-		</scanning-codepoints>
-	</language>
-
-	<language name="SamiSouthern" abbreviated-name="SSM" anglicized-name="Southern Sami">
-		<scanning-codepoints>
-			0x00C4,0x00E4,0x00C5,0x00E5,0x00D6,0x00F6,
 		</scanning-codepoints>
 		<subsetting-codepoints>
-			0x00CF,0x00EF
+			0x201D
 		</subsetting-codepoints>
 	</language>
-	
-	<language name="SamiLule" abbreviated-name="LSM" anglicized-name="Lule Sami">
-		<scanning-codepoints>
-			0x00C1,0x00E1,0x00C4,0x00E4,0x00C5,0x00E5,0x00D1,0x00F1
-		</scanning-codepoints>
-	</language>
 
-	<language name="SamiSkolt" abbreviated-name="SKS" anglicized-name="Skolt Sami">
-		<scanning-codepoints>
-			0x00C2,0x00E2,0x00C4,0x00E4,0x00C5,0x00E5,0x010C,0x010D,0x0110,0x0111,
-			0x01B7,0x0292,0x01EE,0x01EF,0x01E4-0x01E9,0x014A,0x014B,0x00D5,0x00F5,
-			0x0160,0x0161,0x017D,0x017E
-		</scanning-codepoints>
-	</language>
-
-
-	<language name="Serbo-Croatian" abbreviated-name="SRC" parent="English">
+	<language name="Serbo-CroatianLatin" abbreviated-name="SRC" parent="English" anglicized-name="Serbo-Croatian (Latin)">
 		<scanning-codepoints>
 			0x0106,0x0107,0x010C,0x010D,0x0110,0x0111,0x0160,0x0161,0x017D,0x017E,
 			0x2019,0x201A,0x201D,0x201E
@@ -1865,29 +1844,6 @@ CAUTION: Sinhalese needs work!
 		</subsetting-codepoints>
 	</language>
 	
-	<language name="Slovene" abbreviated-name="SLV" parent="English">
-		<scanning-codepoints>
-			0x010C,0x010D,0x0160,0x0161,0x017D,0x017E,0x2018,0x201A,0x201C,0x201E
-		</scanning-codepoints>
-		<subsetting-codepoints>
-			0x00C4,0x00D6,0x00DC,0x00E4,0x00F6,0x00FC,0x0106,0x0107,0x0110,0x0111
-		</subsetting-codepoints>
-	</language>
-
-	<language name="SorbianLower" abbreviated-name="LSB" parent="English" anglicized-name="Sorbian, Lower">
-		<scanning-codepoints>
-			0x0106,0x0107,0010C,0x010D,0x011A,0x011B,0x0141-0x0144,0x0154,0x0155,
-			0x015A,0x015B,0x0160,0x0161,0x0179,0x017A,0x017D,0x017E
-		</scanning-codepoints>
-	</language>
-
-	<language name="SorbianUpper" abbreviated-name="USB" parent="English" anglicized-name="Sorbian, Upper">
-		<scanning-codepoints>
-			0x0106,0x0107,0010C,0x010D,0x011A,0x011B,0x0141-0x0144,0x00D3,0x00F3,
-			0x0158,0x0159,0x0160,0x0161,0x0179,0x017A,0x017D,0x017E
-		</scanning-codepoints>
-	</language>
-
 	<language name="Spanish" abbreviated-name="ESP" parent="English">
 		<scanning-codepoints>
 			0x00A1, <!-- inverted exclamation mark -->
@@ -1910,6 +1866,7 @@ CAUTION: Sinhalese needs work!
 		</scanning-codepoints>
 		<subsetting-codepoints>
 			0x00C7,0x00CF,0x00E7,0x00EF,  <!-- rarely used c cedilla and i dieresis -->
+			0x2015,  <!-- quotation dash -->
 			0x2039,0x203A, <!-- single guillemets -->
 			0x20A1,0x20A7,0x20B2,0x20B3
 		</subsetting-codepoints>
@@ -1921,7 +1878,16 @@ CAUTION: Sinhalese needs work!
 			0x0106,0x0107,0x010C,0x010D,0x0141-0x0144,0x0158-0x015B,0x0161
 		</scanning-codepoints>
 		<subsetting-codepoints>
-			0x008B,0x009B
+			0x00AB,0x00BB,0x2015
+		</subsetting-codepoints>
+	</language>
+
+	<language name="Slovene" abbreviated-name="SLV" parent="English">
+		<scanning-codepoints>
+			0x010C,0x010D,0x0160,0x0161,0x017D,0x017E,0x2018,0x201A,0x201C,0x201E
+		</scanning-codepoints>
+		<subsetting-codepoints>
+			0x00C4,0x00D6,0x00DC,0x00E4,0x00F6,0x00FC,0x0106,0x0107,0x0110,0x0111
 		</subsetting-codepoints>
 	</language>
 
@@ -2019,7 +1985,7 @@ CAUTION: Tibetan needs work!
 			0x00C2,0x00C7,0x00CE,0x00D6,0x00DB,0x00DC,0x00E2,0x00E7,0x00EE,0x00F6,0x00FB,0x00FC,0x011E,0x011F,0x0130,0x0131,0x015E,0x015F
 		</scanning-codepoints>
 		<subsetting-codepoints>
-			0x00AB,0x00BB,0x2039,0x203A,0x20BA
+			0x00AB,0x00BB,0x2015,0x2039,0x203A,0x20BA
 		</subsetting-codepoints>
 	</language>
 
@@ -2165,13 +2131,6 @@ CAUTION: Urdu needs work!
 			0xFB01, <!-- hardcoded fi ligature (needed for MacRoman) -->
 			0xFB02  <!-- hardcoded fl ligature (needed for MacRoman) -->
 		</subsetting-codepoints>
-	</language>
-
-	<language name="Wolof" abbreviated-name="WLF" parent="English">
-		<scanning-codepoints>
-			0x00C0,0x00E0,0x00C3,0x00E3,0x00C9,0x00E9,0x00CB,0x00EB,0x00D1,0x00F1,
-			0x014A,0x014B,0x00D3,0x00F3
-		</scanning-codepoints>
 	</language>
 
 	<language name="Yakut" abbreviated-name="YAK" parent="Cyrillic" anglicized-name="Yakut (Sakha)">
